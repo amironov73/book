@@ -1,28 +1,6 @@
-% !TeX spellcheck = russian_english
-% !TEX TS-program = xelatex
-% !TeX encoding = UTF-8
-
-\documentclass[a4paper,twoside,12pt]{book}
-%\usepackage[utf8]{inputenc}
-\usepackage{fontspec}
-\usepackage{graphicx}
-%\usepackage[russian]{babel}
-
-\setmainfont{Times New Roman}
-\setsansfont{Arial}
-\setmonofont{Courier New}
-\newfontfamily\cyrillicfont[Script=Cyrillic]{Georgia}
-\newfontfamily\cyrillicfontsf[Script=Cyrillic]{Arial}
-\newfontfamily\cyrillicfonttt[Script=Cyrillic]{Consolas}
-\usepackage{polyglossia}
-\setdefaultlanguage{russian}
-
-\usepackage{hyperref}
-%\hypersetup{pdftex,colorlinks=true,allcolors=blue}
-\usepackage{hypcap}
-\usepackage{color}
-\usepackage{listings}
-\usepackage{multirow}
+\documentclass{book}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
 
 \begin{document}
 
@@ -34,9 +12,6 @@
 \maketitle
 %\tableofcontents
 
-\clearpage
-\thispagestyle{empty}
-Описана современная практика каталогизации.
 
 \mainmatter
 \include{./chapter01}
