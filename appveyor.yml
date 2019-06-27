@@ -13,5 +13,5 @@ build_script:
 test: off
 
 artifacts:
-  - path: C:\projects\book\main.pdf
+  - path: main.pdf
     name: main.pdf
