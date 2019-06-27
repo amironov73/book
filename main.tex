@@ -1,9 +1,11 @@
-\documentclass[a5paper,10pt]{book}
+\documentclass[a5paper,openany,10pt]{book}
 \usepackage[utf8]{inputenc}
-\usepackage[russian]{babel}
+\usepackage[english,russian]{babel}
 \usepackage[inner=20mm, outer=15mm, top=20mm, bottom=20mm]{geometry}
 \usepackage{titlesec} 
 \usepackage{fancyhdr} 
+\usepackage{lipsum}
+\usepackage{tabularx}
 
 % нумерация внизу по центру
 \fancyhf{}
@@ -13,18 +15,33 @@
 \pagestyle{fancy}   
 
 \begin{document}
-
+\frontmatter
 \author{Алексей Миронов}
-\title{Практика каталогизации в ИРБИС64 \\
-	{\normalsize методические материалы для каталогизаторов \\
-		с учётом нового ГОСТ 7.0.100-2018
+\title{Практика каталогизации в ИРБИС64\\
+	{\large методические материалы для каталогизаторов\\
+	\normalsize с учётом ГОСТ 7.0.100-2018
 	}
 }
-\date{Иркутск, 2019}
+\date{Июнь 2019}
 
-\frontmatter
-\maketitle
-%\tableofcontents
+\begin{titlepage}
+\clearpage\vspace*{\fill}
+\begin{center}
+	{\Large А. В. Миронов}
+	
+	\vspace{55mm}
+	{\sffamily
+	{\Huge\textbf{\textsc{Практика каталогизации\\в ИРБИС64}}}
+	\vspace{5mm}
+	
+	{\large \textbf{методические материалы для каталогизаторов\\с уч\"eтом ГОСТ 7.0.100-2018}}
+    }
+	\vspace{65mm}
+	
+	{\large Иркутск, 2019}
+\end{center}
+\vspace*{\fill}
+\end{titlepage}
 
 \clearpage
 \thispagestyle{empty}
@@ -34,18 +51,18 @@
 
 \vspace{8mm}
 
-Миронов А. В. \textbf{Практика каталогизации в «ИРБИС64}» : методические материалы для каталогизаторов с учётом нового ГОСТ 7.0.100-2018 / А. В. Миронов. — Иркутск, 2019. — 44 с.
+Миронов А. В. \textbf{Практика каталогизации в ИРБИС64} : методические материалы для каталогизаторов с уч\"eтом ГОСТ~7.0.100-2018 / А.~В.~Миронов. — Иркутск, 2019. — 44 с.
+
+% TODO количество страниц!!!
 
 \vspace{8mm}
 
-\hrule\smallskip
-Издание обобщает опыт эксплуатации АБИС «ИРБИС64» в Иркутской областной государственной универсальной научной библиотеке им. И. И. Мол\-ча\-но\-ва-Сибирского для автоматизации библиотечных процессов; содержит как общие рекомендации по вводу и подробные рекомендации по заполнению наиболее важных полей библиографического описания: сведений об индивидуальных авторах, заглавии, сведения об издании, выходные данные, количественные характеристики, страна издания, язык основного текста, ISBN, цена, общие примечания, примечания об интеллектуальной ответственности, область серии.
+Издание обобщает опыт эксплуатации АБИС "<ИРБИС64"> в Иркутской областной государственной универсальной научной библиотеке им. И. И. Мол\-ча\-но\-ва-Сибирского для автоматизации библиотечных процессов; содержит как общие рекомендации по вводу и подробные рекомендации по заполнению наиболее важных полей библиографического описания: сведений об индивидуальных авторах, заглавии, сведения об издании, выходные данные, количественные характеристики, страна издания, язык основного текста, ISBN, цена, общие примечания, примечания об интеллектуальной ответственности, область серии.
 
 \vspace{3mm}
-Издание рассчитано на каталогизаторов, имеющих базовые навыки работы с АРМ «Каталогизатор». Его цель – помощь в повышении квалификации каталогизаторов.
-\hrule
+Издание рассчитано на каталогизаторов, имеющих базовые навыки работы с АРМ "<Каталогизатор">. Его цель – помощь в повышении квалификации каталогизаторов.
 
-\vspace{4cm}
+\vspace{5cm}
 
 \begin{flushright}
 \textcopyright Алексей Миронов, 2017-2019
@@ -57,22 +74,35 @@
 им. И. И. Молчанова-Сибирского, 2017-2019
 \end{flushright}
 
+\clearpage
+\thispagestyle{empty}
+\tableofcontents
+
 \mainmatter
-\include{./common}
-\include{./names}
-\include{./field70x}
-\include{./field200}
-\include{./field205}
-\include{./field210}
-\include{./field215}
-\include{./field101}
-\include{./field102}
-\include{./field10}
-\include{./field300}
-\include{./field314}
-\include{./field225}
+\include{intro}
+\include{gost}
+\include{common}
+\include{names}
+\include{field70x}
+\include{field71x}
+\include{field200}
+\include{field205}
+\include{field210}
+\include{field215}
+\include{field101}
+\include{field102}
+\include{field10}
+\include{field461}
+\include{field300}
+\include{field314}
+\include{field225}
+\include{outro}
 
 \backmatter
+
+\include{examples}
+\include{keyboard}
+
 % bibliography, glossary and index would go here.
 
 \end{document}
