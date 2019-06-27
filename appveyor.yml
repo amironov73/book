@@ -1,0 +1,17 @@
+version: 1.0.{build}
+image: Visual Studio 2017
+
+clone_folder: C:\projects\book
+
+install:
+  - choco install -y miktex
+  - refreshenv
+
+build_script:
+  - pdflatex C:\projects\book\main.tex
+
+test: off
+
+artifacts:
+  - path: C:\projects\book\main.pdf
+    name: main.pdf
