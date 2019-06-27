@@ -6,6 +6,11 @@
 \usepackage{fancyhdr} 
 \usepackage{lipsum}
 \usepackage{tabularx}
+\usepackage{colortbl}
+\usepackage{xcolor}
+\usepackage{graphicx}
+
+\graphicspath{ {img/} }
 
 % нумерация внизу по центру
 \fancyhf{}
@@ -14,7 +19,10 @@
 \cfoot{\thepage}
 \pagestyle{fancy}   
 
+\newcommand{\thead}[1]{\cellcolor{black}\color{white}\textbf{#1}}	
+
 \begin{document}
+	
 \frontmatter
 \author{Алексей Миронов}
 \title{Практика каталогизации в ИРБИС64: методические материалы для каталогизаторов с учётом ГОСТ 7.0.100-2018}
@@ -78,7 +86,7 @@
 \tableofcontents
 
 \mainmatter
-\include{intro}
+\include{foreword}
 \include{gost}
 \include{common}
 \include{names}
@@ -95,7 +103,7 @@
 \include{field300}
 \include{field314}
 \include{field225}
-\include{outro}
+\include{conclusion}
 
 \backmatter
 
