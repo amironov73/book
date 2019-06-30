@@ -4,11 +4,11 @@
 \usepackage[inner=20mm, outer=15mm, top=20mm, bottom=20mm]{geometry}
 \usepackage{titlesec} 
 \usepackage{fancyhdr} 
-\usepackage{lipsum}
 \usepackage{tabularx}
 \usepackage{colortbl}
 \usepackage{xcolor}
 \usepackage{graphicx}
+\usepackage{tocloft}
 
 % нумерация внизу по центру
 \fancyhf{}
@@ -23,7 +23,7 @@
 	
 \frontmatter
 \author{Алексей Миронов}
-\title{Практика каталогизации в ИРБИС64: методические материалы для каталогизаторов с учётом ГОСТ 7.0.100-2018}
+\title{Практика каталогизации в ИРБИС64: методические материалы с уч\"eтом ГОСТ 7.0.100-2018}
 \date{Июнь 2019}
 
 \begin{titlepage}
@@ -38,7 +38,7 @@
 	
 		\vspace{5mm}
 	
-		{\large \textbf{методические материалы для каталогизаторов\\с уч\"eтом ГОСТ 7.0.100-2018}}
+		{\large \textbf{методические материалы \\с уч\"eтом ГОСТ 7.0.100-2018}}
     }
 
 	\vspace{65mm}
@@ -56,7 +56,7 @@
 
 \vspace{8mm}
 
-Миронов А. В. \textbf{Практика каталогизации в ИРБИС64} : методические материалы для каталогизаторов с уч\"eтом ГОСТ~7.0.100-2018 / А.~В.~Миронов. — Иркутск, 2019. — 44 с.
+Миронов А. В. \textbf{Практика каталогизации в ИРБИС64} : методические материалы с уч\"eтом ГОСТ~7.0.100-2018 / А.~В.~Миронов. — Иркутск, 2019. — 44 с.
 
 % TODO количество страниц!!!
 
@@ -81,6 +81,10 @@
 
 \clearpage
 \thispagestyle{empty}
+\setcounter{tocdepth}{0}
+\setlength\cftparskip{-7pt}
+%\setlength\cftbeforesecskip{1pt}
+%\setlength\cftaftertoctitleskip{2pt}
 \tableofcontents
 
 \mainmatter
