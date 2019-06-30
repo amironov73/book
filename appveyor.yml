@@ -9,6 +9,7 @@ install:
 
 build_script:
   - pdflatex C:\projects\book\main.tex
+  - pdflatex C:\projects\book\main.tex
 
 test: off
 
