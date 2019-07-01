@@ -264,3 +264,127 @@
 \subsubsection \paragraph \subparagraph
 ```
 
+#### Вставка изображений
+
+```
+\includegraphics{имя_графического_файла}
+```
+
+С масштабированием:
+
+```
+\includegraphics[scale=0.5]{имя_файла}
+
+или
+
+\includegraphics[width=4cm]{имя_файла}
+
+или
+
+\includegraphics[height=1in]{имя_файла}
+```
+
+С поворотом:
+
+```
+\includegraphics[height=1in, angle=45]{имя_файла}
+```
+
+С обрезкой:
+
+```
+\includegraphics[trim=1in 2in 0in 3in, clip]{имя_файла}
+```
+
+В окружении figure:
+
+```
+\begin{figure}
+\includegraphics[scale=2]{pig.mps}
+\caption{Свинка без ушей}\label{piggy}
+\end{figure}
+```
+
+указываем, где разместить картинку:
+
+```
+\begin{figure}[tbp]
+```
+
+t - разместить иллюстрацию в верхней части страницы;
+b - разместить иллюстрацию в нижней части страницы;
+p - разместить иллюстрацию на отдельной странице, целиком состоящей из «плавающих» иллюстраций (или таблиц);
+h разместить иллюстрацию прямо там, где она встретилась в исходном тексте, не перенося ее никуда.
+
+С обтеканием текстом:
+
+```
+\begin{wrapfigure}{o}{62.2pt}
+    команды, задающие рисунок
+\end{wrapfigure}
+```
+
+#### Таблицы
+
+```
+\begin{tabular}{lc}
+Тип перечня & нумерация \\[5pt]
+\ttfamily itemize & нет\\
+\ttfamily enumerate & есть\\
+\ttfamily description & нет\\
+\end{tabular}
+```
+
+Длинная таблица:
+
+```
+\usepackage{longtable}
+
+...
+
+\begin{longtable}{|l|l|}
+\hline
+Код & Значение \\
+\hline
+1 & 2 \\
+\hline\endfirsthead
+\hline
+1 & 2 \\
+\hline\endhead
+\hline
+\multicolumn{2}{c}{\emph{Продолжение на следующей странице}} \\
+\endfoot
+\hline\endlastfoot
+101 & Значение для кода 101 \\
+\hline
+102 & Значение для кода 102 \\
+\hline
+103 & И так далее \\
+\end{longtable}
+```
+
+#### Определение новых команд
+
+Без аргументов
+
+```
+\newcommand{\eqdef}{\stackrel{\mathrm{def}}{=}}
+...
+x^2\eqdef x\cdot x
+```
+
+С аргументами
+
+```
+\newcommand{\smb}[2]{\left(\frac{#1}{#2}\right)}
+```
+
+#### Счетчики
+
+```
+\newcounter{abcd}          % Создаем счетчик
+\setcounter{abcd}{1998}    % Устанавливаем его значение
+\addtocounter{abcd}{-27}   % Увеличиваем его значение
+\arabic{abcd}              % Выводим арабскими цифрами
+\Roman{abcd}               % Выводим прописными римскими
+```
