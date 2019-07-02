@@ -25,9 +25,13 @@
 
 %\titleformat{\chapter}[display]{\sffamily\bfseries\huge}{}{}{}[\hrule]
 %\titleformat{\chapter}[display]{\sffamily\bfseries\huge}{}{}{}[]
-%\titleformat{\section}[display]{\sffamily\bfseries\Large}{}{}{}[]
+%\titleformat{\section}[display]{\sffamily\bfseries\Large }{}{}{}[]
 
-\newenvironment{cutelist}{\vspace{-3mm}\begin{itemize}\setlength\itemsep{-2mm}}{\end{itemize}}
+\newenvironment{cutelist}{% более компактный список
+    \vspace{-3mm}
+    \begin{itemize}
+        \setlength\itemsep{-2mm}}
+    {\end{itemize}}
 
 \begin{document}
 
