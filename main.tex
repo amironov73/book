@@ -2,7 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[english,russian]{babel}
 \usepackage[inner=20mm, outer=15mm, top=20mm, bottom=20mm]{geometry}
-\usepackage{titlesec} 
+\usepackage[sf,bf,raggedright,compact,small]{titlesec} 
 \usepackage{fancyhdr} 
 \usepackage{tabularx}
 \usepackage{longtable}
@@ -108,7 +108,7 @@
 \include{names}
 
 % добавляем горизонтальную линию в оглавление
-\addtocontents{toc}{\hrule}
+\addtocontents{toc}{\vspace{2mm}\hrule\vspace{2mm}}
 
 \include{field70x}
 \include{field71x}
