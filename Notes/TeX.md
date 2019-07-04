@@ -392,3 +392,33 @@ x^2\eqdef x\cdot x
 \arabic{abcd}              % Выводим арабскими цифрами
 \Roman{abcd}               % Выводим прописными римскими
 ```
+
+#### Китайские иероглифы
+
+Если нужно набрать всего несколько иероглифов
+
+```
+\begin{CJK*}{UTF8}{gbsn} 毛泽东 \end{CJK*} означает Мао Дзедун.
+```
+
+Если нужно набрать весь текст на китайском
+
+```
+% UTF-8 encoding
+% Compile with latex+dvipdfmx, pdflatex, xelatex or lualatex
+% XeLaTeX is recommanded
+\documentclass[UTF8]{ctexart}
+\begin{document}
+文章内容。
+\end{document}
+```
+
+или
+
+```
+\documentclass{article}
+\usepackage[UTF8]{ctex}
+\begin{document}
+文章内容。
+\end{document}
+```
