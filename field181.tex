@@ -1,0 +1,80 @@
+\chapter{Поле 181: коды - вид содержания}
+
+Поле введено в ИРБИС64+ версии 2018.1 в связи с переходом на ГОСТ 7.0.100-2018.
+
+\section{Подполе A: вид содержания}
+
+Значения берутся из справочника \emph{181vs.mnu}.
+
+\begin{cutelist}
+    \item \textbf{a} -- электронные данные
+    \item \textbf{b} -- изображение
+    \item \textbf{c} -- движение
+    \item \textbf{d} -- музыка
+    \item \textbf{e} -- предмет
+    \item \textbf{f} -- программа
+    \item \textbf{g} -- звуки
+    \item \textbf{h} -- устная речь
+    \item \textbf{i} -- текст
+    \item \textbf{m} -- разные виды содержания
+    \item \textbf{z} -- другой вид содержания
+\end{cutelist}
+
+\section{Подполе B: степень применимости}
+
+Значения берутся из справочника \emph{181sp.mnu}.
+
+\begin{cutelist}
+    \item \textbf{0} -- не применимо
+    \item \textbf{1} -- частично
+    \item \textbf{2} -- существенно
+    \item \textbf{3} -- преобладает
+    \item \textbf{4} -- полностью
+\end{cutelist}
+
+\section{Подполе C: спецификация типа}
+
+Значения берутся из справочника \emph{181st.mnu}.
+
+\begin{cutelist}
+    \item \textbf{a} -- записанный знаками
+    \item \textbf{b} -- исполняемый
+    \item \textbf{c} -- картографический
+    \item \textbf{x} -- не применяется
+\end{cutelist}
+
+\section{Подполе D: спецификация движения}
+
+Используется только с видом содержания "<изображение">.
+
+Значения берутся из справочника \emph{181sd.mnu}.
+
+\begin{cutelist}
+    \item \textbf{a} -- движущееся
+    \item \textbf{b} -- неподвижное
+    \item \textbf{x} -- не применяется
+\end{cutelist}
+
+\section{Подполе E: спецификация размерности}
+
+Используется только с видом содержания "<изображения">.
+
+Значения берутся из справочника \emph{181sr.mnu}.
+
+\begin{cutelist}
+    \item \textbf{2} -- двухмерное
+    \item \textbf{3} -- тр\"eхмерное
+    \item \textbf{x} -- не применяется
+\end{cutelist}
+
+\section{Подполе F: сенсорная спецификация}
+
+Значения берутся из справочника \emph{181ss.mnu}.
+
+\begin{cutelist}
+    \item \textbf{a} -- слуховой
+    \item \textbf{b} -- вкусовой
+    \item \textbf{с} -- обонятельный
+    \item \textbf{d} -- тактильный
+    \item \textbf{e} -- визуальный
+\end{cutelist}
